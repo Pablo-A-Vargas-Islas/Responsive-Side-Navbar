@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import Image from 'next/image'; // Importa el componente Image de Next.js
 
 const Choferes = () => {
   const router = useRouter();
@@ -33,7 +34,7 @@ const Choferes = () => {
         {choferes.map((chofer) => (
           <div key={chofer.id} style={{ margin: '10px', width: '200px' }}>
             {console.log('Ruta de la foto:', chofer.foto)}
-            <img src={chofer.foto} alt="Foto de chofer" style={{ width: '100%', height: 'auto' }} />
+            <Image src={chofer.foto} alt="Foto de chofer" width={200} height={200} /> {/* Reemplaza <img> con Image */}
             <p>{chofer.nombre}</p>
           </div>
         ))}
@@ -47,4 +48,3 @@ const Choferes = () => {
 };
 
 export default Choferes;
-
