@@ -33,8 +33,8 @@ const Choferes = () => {
         {/* Renderizar las tarjetas de los choferes existentes */}
         {choferes.map((chofer) => (
           <div key={chofer.id} style={{ margin: '10px', width: '200px' }}>
-            {console.log('Ruta de la foto:', chofer.foto)}
-            <Image src={chofer.foto} alt="Foto de chofer" width={200} height={200} /> {/* Reemplaza <img> con Image */}
+            {/* <img src={`/${chofer.foto}`} alt="Foto de chofer" width={200} height={200} /> */}
+            <Image src={`/${chofer.foto}`} alt="Foto de chofer" width={200} height={200} />
             <p>{chofer.nombre}</p>
           </div>
         ))}

@@ -34,10 +34,10 @@ let conn;
 async function initializeConnection() {
   conn = new Pool({
     user: "postgres",
-    password: "admin",
-    host: "localhost",
+    password: "servgago",
+    host: "77.37.67.109",
     port: "5432",
-    database: "Gago",
+    database: "postgres",
   });
 
   // Espera a que se complete la inicialización de la conexión

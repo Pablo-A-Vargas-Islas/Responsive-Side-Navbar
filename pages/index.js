@@ -53,6 +53,8 @@ export default function Login(){
           loading="lazy"
           alt=""
           src="/imagen-de-whatsapp-20240401-a-las-1018-1@2x.png"
+          width={500}
+          height={800}
         />
         <button className="cursor-pointer [border:none] pt-[27px] pb-7 pr-[41.5px] pl-[43px] bg-[transparent] w-[371px] !m-[0] absolute right-[-45px] bottom-[48px] flex flex-row items-start justify-start box-border whitespace-nowrap z-[1]">
           <div className="h-full w-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px] rounded-31xl bg-white" />
@@ -66,10 +68,10 @@ export default function Login(){
         <div className="self-stretch flex flex-col items-start justify-start gap-[108px] max-w-full mq750:gap-[54px_108px] mq450:gap-[27px_108px]">
           <div className="self-stretch flex flex-col items-end justify-start gap-[45px] max-w-full mq750:gap-[22px_45px]">
             <Image
-              className="w-[100px] h-[100px] relative rounded-31xl overflow-hidden shrink-0 object-cover z-[3]"
-              loading="lazy"
-              alt=""
               src="/logo.png"
+              alt="Logo"
+              width={100} 
+              height={100} 
             />
             <div className="self-stretch flex flex-row" style={{ alignItems: 'center', justifyContent: 'center' }}>
               <div className="w-[580px] shadow-[0px_4px_25px_rgba(0,_0,_0,_0.25)] flex flex-col items-start justify-start pt-[88px] px-[54px] pb-[138px] box-border relative gap-[61px] max-w-full z-[3] mq750:gap-[30px_61px] mq750:pt-[57px] mq750:px-[27px] mq750:pb-[90px] mq750:box-border mq450:gap-[15px_61px]">
@@ -123,6 +125,8 @@ export default function Login(){
                             loading="lazy"
                             alt=""
                             src="/iconamooneye.svg"
+                            width={23} // Agrega la propiedad width con el mismo valor que el ancho especificado en el estilo CSS
+                            height={23} // Agrega la propiedad height con el mismo valor que la altura especificada en el estilo CSS
                           />
                         </div>
                       </div>

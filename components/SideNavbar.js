@@ -50,7 +50,12 @@ function SideNavbar() {
         <div className="p-6 w-1/2 h-screen bg-white z-20 fixed top-0 -left-96 lg:left-0 lg:w-60  peer-focus:left-0 peer:transition ease-out delay-150 duration-200 shadow-md">
           <div className="flex flex-col justify-start item-center">
             <div className="flex justify-center items-center mb-4">
-              <Image src="/logo.png" alt="Logo" className="w-12 h-12" />
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              width={60} 
+              height={60} 
+            />
             </div>
             <h1 className="text-base text-center cursor-pointer font-bold text-blue-900 border-b border-gray-100 pb-4 w-full">
               TRANSPORTES GAGO
@@ -65,7 +70,7 @@ function SideNavbar() {
               <div className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-royalblue1 hover:text-white p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto" onClick={() => setCurrentPage("ChoferesPage")}>
                 <CgProfile className="text-2xl text-gray-600 group-hover:text-white " />
                 <h3 className="text-base text-gray-800 group-hover:text-white font-semibold ">
-                  Profile
+                  Choferes
                 </h3>
               </div>
               <div className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-royalblue1 hover:text-white p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto" onClick={() => setCurrentPage("Comments")}>

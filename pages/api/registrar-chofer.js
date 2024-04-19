@@ -1,5 +1,3 @@
-// pages/api/registrar-chofer.js
-
 import multiparty from 'multiparty';
 import fs from 'fs';
 import path from 'path';
@@ -12,7 +10,7 @@ export const config = {
   },
 };
 
-const uploadDir = './public/archivos_choferes'; // Ruta donde se guardarán las imágenes
+const uploadDir = './public'; // Ruta donde se guardarán las imágenes
 
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true }); // Crea la carpeta de manera recursiva si no existe
@@ -38,15 +36,15 @@ const handler = async (req, res) => {
     // Genera nombres únicos para los archivos
     const nombreSinEspacios = nombre[0].replace(/\s+/g, '');
     const fotoNombreNuevo = `Foto_${nombreSinEspacios}${path.extname(foto[0].path)}`;
-    const fotoRutaNueva = path.join(uploadDir, fotoNombreNuevo).replace(/\\/g, '/');
+    const fotoRutaNueva = path.join(fotoNombreNuevo).replace(/\\/g, '/');
     const actaNacimientoNombreNuevo = `ActaNacimiento_${nombreSinEspacios}${path.extname(actaNacimiento[0].path)}`;
-    const actaNacimientoRutaNueva = path.join(uploadDir, actaNacimientoNombreNuevo).replace(/\\/g, '/');
+    const actaNacimientoRutaNueva = path.join(actaNacimientoNombreNuevo).replace(/\\/g, '/');
 
     // Cambia el nombre del archivo de la foto
-    fs.renameSync(foto[0].path, fotoRutaNueva);
+    fs.renameSync(foto[0].path, path.join(uploadDir, fotoRutaNueva));
 
     // Cambia el nombre del archivo del acta de nacimiento
-    fs.renameSync(actaNacimiento[0].path, actaNacimientoRutaNueva);
+    fs.renameSync(actaNacimiento[0].path, path.join(uploadDir, actaNacimientoRutaNueva));
 
     // Guarda la ruta de los archivos en la base de datos
     try {
